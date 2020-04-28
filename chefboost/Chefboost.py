@@ -88,10 +88,10 @@ def fit(df, config):
 		if df['Decision'].dtypes == 'object':
 			raise ValueError('Regression trees cannot be applied for nominal target values! You can either change the algorithm or data set.')
 
-	if df['Decision'].dtypes != 'object': #this must be regression tree even if it is not mentioned in algorithm
-		algorithm = 'Regression'
-		config['algorithm'] = 'Regression'
-		global_stdev = df['Decision'].std(ddof=0)
+#	if df['Decision'].dtypes != 'object': #this must be regression tree even if it is not mentioned in algorithm
+#		algorithm = 'Regression'
+#		config['algorithm'] = 'Regression'
+#		global_stdev = df['Decision'].std(ddof=0)
 
 	if enableGBM == True:
 		print("Gradient Boosting Machines...")
